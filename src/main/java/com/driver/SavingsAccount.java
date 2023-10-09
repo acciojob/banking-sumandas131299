@@ -22,7 +22,7 @@ public class SavingsAccount extends BankAccount{
     }
 
     public double getSimpleInterest(int years) {
-        return   (this.getBalance()* this.rate * (double)years / 100.0);
+        return this.getBalance() * (1.0 + this.rate * (double)years / 100.0);
     }
 
     public double getCompoundInterest(int times, int years) {
